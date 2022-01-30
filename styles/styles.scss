@@ -1,0 +1,61 @@
+$darkBlue: hsl(229, 57%, 11%);
+
+
+
+
+body{
+  margin:0;
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background: $darkBlue no-repeat bottom url(../images/bg-desktop.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  nav{
+    background-color: hsl(228, 56%, 26%);
+    width: 360px;
+    height: 200px;
+    border-radius: 10px 100px 10px 10px;
+    box-sizing: border-box;
+    padding: 40px 35px;
+
+    img{
+      padding-right: 50%;
+    }
+
+    ul{
+      margin: 0;
+      padding: 35px 0 0 0;
+      display: inline-flex;
+      flex-direction: row;
+      list-style: none;
+
+      li{
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $darkBlue;
+
+        img{
+          padding: 0;
+          margin: 0;
+          width: 18px;
+        }
+      }
+    }
+  }
+
+
+  main{
+
+  }
+}
