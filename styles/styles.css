@@ -5,7 +5,10 @@ body {
   height: 100vh;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
-  background: #0c122c no-repeat bottom url(../images/bg-desktop.png);
+  background-color: #0c122c;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url(../images/bg-desktop.png);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,10 +42,76 @@ body nav ul li {
   align-items: center;
   background-color: #0c122c;
 }
+body nav ul li:hover {
+  filter: brightness(150%);
+  cursor: pointer;
+}
 body nav ul li img {
   padding: 0;
   margin: 0;
   width: 18px;
+}
+body main {
+  position: relative;
+  width: 540px;
+  height: 160px;
+  background-color: #1d2c67;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 30px;
+  padding: 36px;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 400;
+}
+body main p {
+  margin: 0;
+}
+body main input {
+  width: 100%;
+  margin-top: 15px;
+}
+body main .minGB, body main .maxGB {
+  color: #848794;
+}
+body main .maxGB {
+  right: 36px;
+  position: absolute;
+}
+body main .bubble {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 72px;
+  background-color: white;
+  border-radius: 10px;
+  top: -50px;
+  right: 35px;
+}
+body main .bubble b {
+  font-size: 36px;
+  color: black;
+  margin-right: 10px;
+}
+body main .bubble p {
+  font-weight: 700;
+  color: #848794;
+}
+body main .bubble::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  height: 0;
+  width: 0;
+  background-clip: padding-box;
+  border-top: solid 24px transparent;
+  border-bottom: solid 24px transparent;
+  border-right: solid 27px white;
+  right: 0;
+  bottom: -24px;
 }
 
 /*# sourceMappingURL=styles.css.map */

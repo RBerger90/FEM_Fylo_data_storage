@@ -22,13 +22,25 @@
         </ul>
     </nav>
     <main>
-
-        You’ve used 815 GB of your storage
-
-        185 GB Left
-
-        0 GB
-        1000 GB
+        <p>You’ve used <b id="gbUse">815</b><b> GB</b> of your storage</p>
+        <input type="range" min="0" max="1000" value="815" id="range"/>
+        <b class="minGB">0 GB</b>
+        <b class="maxGB">1000 GB</b>
+        <div class="bubble">
+            <b id="gbLeft">185</b>
+            <p>GB LEFT</p>
+        </div>
     </main>
+
+<script>
+    const range = document.getElementById("range");
+
+    range.addEventListener("input", ()=>{
+        let val = range.value;
+        document.getElementById("gbUse").innerHTML = val;
+        document.getElementById("gbLeft").innerHTML = 1000 - val;
+    })
+</script>
+
 </body>
 </html>
