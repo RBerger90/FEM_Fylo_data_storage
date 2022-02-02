@@ -114,4 +114,42 @@ body main .bubble::after {
   bottom: -24px;
 }
 
+@media screen and (max-device-width: 460px) {
+  body {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/bg-mobile.png);
+    flex-direction: column;
+  }
+
+  nav {
+    width: 330px !important;
+  }
+
+  main {
+    width: 325px !important;
+    margin-left: 0 !important;
+    text-align: center;
+  }
+  main input {
+    width: 100%;
+    margin-top: 15px;
+  }
+  main .minGB, main .maxGB {
+    color: white !important;
+    font-weight: 400;
+  }
+  main .minGB {
+    position: absolute;
+    left: 36px;
+  }
+  main .bubble {
+    left: 70px;
+    top: 122px !important;
+  }
+  main .bubble::after {
+    display: none !important;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

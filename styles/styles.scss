@@ -142,3 +142,51 @@ body {
 
     }
 }
+
+@media screen and (max-device-width: 460px){
+    body{
+        background:{
+            position: center;
+            size: cover;
+            image: url(../images/bg-mobile.png);
+        }
+        flex-direction: column;
+    }
+
+    nav {
+        width: 330px !important;
+    }
+
+    main {
+        width: 325px !important;
+        margin-left: 0 !important;
+        text-align: center;
+
+
+        input{
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .minGB, .maxGB{
+            color: white !important;
+            font-weight: 400;
+        }
+
+        .minGB{
+            position: absolute;
+            left: 36px;
+        }
+
+        .bubble{
+            left: 70px;
+            top: 122px !important;
+
+
+            &::after{
+                display: none !important;
+            }
+        }
+
+    }
+}
