@@ -67,9 +67,103 @@ body main {
 body main p {
   margin: 0;
 }
-body main input {
+body main input[type=range] {
+  margin: 15px 0 0 0;
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
   width: 100%;
-  margin-top: 15px;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  /* Special styling for WebKit/Blink */
+  /* All the same stuff for Firefox */
+  /* All the same stuff for IE */
+}
+body main input[type=range]:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+body main input[type=range]:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+}
+body main input[type=range]:focus::-ms-fill-lower {
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+}
+body main input[type=range]:focus::-ms-fill-upper {
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+}
+body main input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+body main input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 8px;
+  width: 8px;
+  border-radius: 50px;
+  margin-top: 2px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 1px 0 2px white, -1px 0 2px white, 0 1px 2px white, 0 -1px 2px white;
+}
+body main input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+  border-radius: 30px;
+  border: 1px solid #010101;
+}
+body main input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 5px;
+  width: 14px;
+  border-radius: 50px;
+  box-sizing: content-box;
+  background: #ffffff;
+  box-shadow: 1px 0 2px white, -1px 0 2px white, 0 1px 2px white, 0 -1px 2px white;
+  cursor: pointer;
+}
+body main input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 9px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+  border-radius: 30px;
+  border: 1px solid #010101;
+}
+body main input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 5px;
+  width: 5px;
+  border-radius: 50px;
+  box-sizing: content-box;
+  background: #ffffff;
+  box-shadow: 1px 0 2px white, -1px 0 2px white, 0 1px 2px white, 0 -1px 2px white;
+  cursor: pointer;
+}
+body main input[type=range]::-ms-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+body main input[type=range]::-ms-fill-lower {
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+  border: 1px solid #010101;
+  border-radius: 30px;
+}
+body main input[type=range]::-ms-fill-upper {
+  background: linear-gradient(90deg, #F0A79B, #E84497);
+  border: 1px solid #010101;
+  border-radius: 30px;
 }
 body main .minGB, body main .maxGB {
   color: #848794;
@@ -138,6 +232,7 @@ body main .bubble::after {
   main .minGB, main .maxGB {
     color: white !important;
     font-weight: 400;
+    top: 82px;
   }
   main .minGB {
     position: absolute;
